@@ -5,8 +5,8 @@ export default function SignUpForm({ token, setToken }) {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     try {
       const response = await fetch(
         "https://fsa-jwt-practice.herokuapp.com/signup",
@@ -29,19 +29,22 @@ export default function SignUpForm({ token, setToken }) {
 
   return (
     <>
-      <h2>Sign Up Below!</h2><br />
+    <div className="signup-container">
+      <h2>Sign Up Below</h2>
+      <br />
       {error && <p>{error}</p>}
 
       <form onSubmit={handleSubmit}>
         <label>
-          Username:{" "}
+          Username:
           <input
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
         </label>
+        <br />
         <label>
-          Password:{" "}
+          Password:
           <input
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -49,9 +52,8 @@ export default function SignUpForm({ token, setToken }) {
         </label>
         <br />
         <br />
-        
         <button>Submit</button>
-      </form>
+      </form></div>
     </>
   );
 }
