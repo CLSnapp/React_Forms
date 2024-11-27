@@ -3,11 +3,9 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: #000000;
 }
 
-body{
-  color: black;
-}
 .signup-container {
   margin: 0 auto;
   border: 5px dotted yellow;

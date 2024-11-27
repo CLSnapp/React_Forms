@@ -7,6 +7,7 @@ export default function SignUpForm({ token, setToken }) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    console.log(username, password);
     try {
       const response = await fetch(
         "https://fsa-jwt-practice.herokuapp.com/signup",
