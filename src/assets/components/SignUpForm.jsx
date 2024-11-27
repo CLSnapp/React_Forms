@@ -44,6 +44,7 @@ export default function SignUpForm({ token, setToken }) {
             <input
               value={username}
               onChange={(e) => setUsername(e.target.value)}
+              placeholder="Enter Email"
             />
           </label>
           <br />
@@ -56,6 +57,7 @@ export default function SignUpForm({ token, setToken }) {
               title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
               required
               onChange={(e) => setPassword(e.target.value)}
+              placeholder="Enter Password"
             ></input>
           </label>
           <br />
